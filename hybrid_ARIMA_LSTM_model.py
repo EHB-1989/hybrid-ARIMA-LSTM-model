@@ -36,7 +36,6 @@ def get_arima(data, train_len, test_len):
     # Genereate predictions
     prediction = []
     for i in range(len(test)):
-        # model = pm.ARIMA(order, seasonal_order)
         model = pm.ARIMA(order=order)
         model.fit(train)
         print('working on', i+1, 'of', test_len, '-- ' + str(int(100 * (i + 1) / test_len)) + '% complete')
