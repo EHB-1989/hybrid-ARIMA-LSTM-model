@@ -52,8 +52,7 @@ def get_arima(data, train_len, test_len):
 def get_lstm(data, train_len, test_len, lstm_len=4):
     # prepare train and test data
     data = data.tail(test_len + train_len).reset_index(drop=True)
-    df = pd.DataFrame({'the data': data.values})
-    dataset = df.values
+    dataset = np.reshape(data.values, (len(data), 1))
     scaler = MinMaxScaler(feature_range=(0, 1))
     dataset_scaled = scaler.fit_transform(dataset)
     x_train = []
@@ -100,8 +99,7 @@ def get_lstm(data, train_len, test_len, lstm_len=4):
 
 if __name__ == '__main__':
     # Load historical data
-    data = pd.read_csv('YOUR-DATA-HERE.csv', index_col=0, header=0).tail(1500).reset_index(
-        drop=True)
+    data = pd.read_csv('YOUR-DATA-HERE.csv', index_col=0, header=0).tail(1500).reset_index(drop=True)
 
     # Initialize moving averages from Ta-Lib, store functions in dictionary
     talib_moving_averages = ['SMA', 'EMA', 'WMA', 'DEMA', 'KAMA', 'MIDPOINT', 'MIDPRICE', 'T3', 'TEMA', 'TRIMA']
