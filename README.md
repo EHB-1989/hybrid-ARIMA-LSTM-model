@@ -10,6 +10,9 @@ The accuracy of the ARIMA-LSTM model is evaluated in several ways. MSE, RMSE, an
 # Further Research
 The hybrid ARIMA-LSTM model is open to a variety of experimentation. For ideal performance, a balance must be reached between the levels of volatility that work best for the ARIMA and LSTM models.  Using shorter MA periods that result in a non-mesokurtic distribution may achieve a better volatility balance between models. Additionally, the structure of the LSTM network can be altered to include more tensors of different lengths and dropout layers. Various activation functions and optimizers are also worth exploring. Finally, this model can be examined with other index ETF’s, stocks, futures, and forex contracts.
 
+# Contact
+Questions? Feel free to reach out via my LinkedIn on my profile page. I'm also seeking employment in data science/finance!
+
 # Dependencies
 * Python 3
 * Numpy
@@ -22,3 +25,4 @@ The hybrid ARIMA-LSTM model is open to a variety of experimentation. For ideal p
 
 # References
 * [Stock Price Prediction Based on ARIMA-RNN Combined Model](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=2ahUKEwjU0NqbvejkAhXDJt8KHQTeAZ0QFjAAegQIAxAC&url=http%3A%2F%2Fdpi-proceedings.com%2Findex.php%2Fdtssehs%2Farticle%2Fdownload%2F19384%2F18875&usg=AOvVaw1Iy45JKJrEOXXxo0VqcE9J)
+
