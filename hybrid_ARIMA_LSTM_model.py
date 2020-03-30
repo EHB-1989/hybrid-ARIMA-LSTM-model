@@ -99,6 +99,7 @@ def get_lstm(data, train_len, test_len, lstm_len=4):
 
 if __name__ == '__main__':
     # Load historical data
+    # CSV should have columns: ['date', 'open', 'high', 'low', 'close', 'volume']
     data = pd.read_csv('YOUR-DATA-HERE.csv', index_col=0, header=0).tail(1500).reset_index(drop=True)
 
     # Initialize moving averages from Ta-Lib, store functions in dictionary
